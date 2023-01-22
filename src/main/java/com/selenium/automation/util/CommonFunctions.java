@@ -65,17 +65,21 @@ public class CommonFunctions extends Base {
         driver.get(url);
         waitForPageLoading();
     }
+    public void redirectTourlSignUp(String urlSignUp) {
+        driver.get(urlSignUp);
+        waitForPageLoading();
+    }
 
     public void waitForPageLoading() {
         try {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(60));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
             wait.until(webDriver -> ((JavascriptExecutor) driver).executeScript("return document.readyState").toString().equals("complete"));
         } catch (Exception e) {
         }
     }
 
     public String getCurrentPageTile() {
-        return driver.getTitle().trim();
+        return driver.getTitle();
     }
 
 

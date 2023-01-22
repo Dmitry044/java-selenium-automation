@@ -23,7 +23,7 @@ public class LoginPageTest extends Base {
     public void loginFunctionality() {
         boolean isLogin;
         isLogin=loginPage.verifyByLogin();
-        Assert.assertTrue(isLogin, "Login Failed!!!!");
+        Assert.assertTrue(isLogin);
     }
 
 

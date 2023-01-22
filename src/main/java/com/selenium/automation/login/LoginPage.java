@@ -10,7 +10,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.time.Duration;
 
-public class LoginPage extends Base {
+import static com.selenium.automation.base.Base.driver;
+
+public class LoginPage{
     public static CommonFunctions commonFunctions;
     @FindBy(xpath="//input[@id='user_login']")
     private WebElement email;
